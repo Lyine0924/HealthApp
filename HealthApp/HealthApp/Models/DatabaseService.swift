@@ -37,7 +37,7 @@ class DatabaseService {
     }
     
     var mainStorageRef: StorageReference {
-        return Storage.storage().reference(forURL: "gs://healthapp-f49f3.appspot.com")
+        return Storage.storage().reference(forURL: "gs://healthapp-46f96.appspot.com")
     }
     
     var imageStorageRef: StorageReference {

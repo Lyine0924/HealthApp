@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -41,7 +41,6 @@
 		B3DAD47222E0F53C00FDF3A3 /* PlaceholderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DAD47122E0F53C00FDF3A3 /* PlaceholderTableViewCell.swift */; };
 		B3DAD47422E0F57400FDF3A3 /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DAD47322E0F57400FDF3A3 /* EditProfileTableViewController.swift */; };
 		B3DAD47622E0FBB200FDF3A3 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DAD47522E0FBB200FDF3A3 /* TextFieldTableViewCell.swift */; };
-		B3DCCA3822DFC2C3004EFFF7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3DCCA3722DFC2C3004EFFF7 /* GoogleService-Info.plist */; };
 		B3DCE35C22D03AC000DAC751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DCE35B22D03AC000DAC751 /* AppDelegate.swift */; };
 		B3DCE35E22D03AC000DAC751 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DCE35D22D03AC000DAC751 /* ProfileViewController.swift */; };
 		B3DCE36122D03AC000DAC751 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3DCE35F22D03AC000DAC751 /* Main.storyboard */; };
@@ -62,6 +61,8 @@
 		B3FD83C422D572AA00D3014A /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FD83C322D572AA00D3014A /* Appointment.swift */; };
 		B3FD83C722D574CC00D3014A /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FD83C622D574CC00D3014A /* HealthKit.framework */; };
 		DD96CCE78C9F18B7786B37CA /* Pods_HealthApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC19C8BECAE9693EB6DA65BC /* Pods_HealthApp.framework */; };
+		EE6D68A422F4679600A1C068 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE6D68A322F4679600A1C068 /* GoogleService-Info.plist */; };
+		EE6D68A622F4680900A1C068 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6D68A522F4680900A1C068 /* AuthenticationServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,7 +102,6 @@
 		B3DAD47122E0F53C00FDF3A3 /* PlaceholderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTableViewCell.swift; sourceTree = "<group>"; };
 		B3DAD47322E0F57400FDF3A3 /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		B3DAD47522E0FBB200FDF3A3 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
-		B3DCCA3722DFC2C3004EFFF7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B3DCE35822D03AC000DAC751 /* HealthApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3DCE35B22D03AC000DAC751 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3DCE35D22D03AC000DAC751 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +125,8 @@
 		B3FD83C522D574CB00D3014A /* HealthApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthApp.entitlements; sourceTree = "<group>"; };
 		B3FD83C622D574CC00D3014A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		CC19C8BECAE9693EB6DA65BC /* Pods_HealthApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE6D68A322F4679600A1C068 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EE6D68A522F4680900A1C068 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE6D68A622F4680900A1C068 /* AuthenticationServices.framework in Frameworks */,
 				DD96CCE78C9F18B7786B37CA /* Pods_HealthApp.framework in Frameworks */,
 				B3FD83C722D574CC00D3014A /* HealthKit.framework in Frameworks */,
 			);
@@ -230,9 +233,9 @@
 				B3DCE36422D03AC300DAC751 /* LaunchScreen.storyboard */,
 				B3DCE36222D03AC300DAC751 /* Assets.xcassets */,
 				B3DCE37322D046A800DAC751 /* Util.swift */,
-				B3DCCA3722DFC2C3004EFFF7 /* GoogleService-Info.plist */,
 				B3DCE36722D03AC300DAC751 /* Info.plist */,
 				B3FD83C522D574CB00D3014A /* HealthApp.entitlements */,
+				EE6D68A322F4679600A1C068 /* GoogleService-Info.plist */,
 			);
 			path = HealthApp;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 		D2530A3FD16D62AB934D721C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EE6D68A522F4680900A1C068 /* AuthenticationServices.framework */,
 				B3FD83C622D574CC00D3014A /* HealthKit.framework */,
 				CC19C8BECAE9693EB6DA65BC /* Pods_HealthApp.framework */,
 			);
@@ -336,7 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3DCE36622D03AC300DAC751 /* LaunchScreen.storyboard in Resources */,
-				B3DCCA3822DFC2C3004EFFF7 /* GoogleService-Info.plist in Resources */,
+				EE6D68A422F4679600A1C068 /* GoogleService-Info.plist in Resources */,
 				B3DCE36322D03AC300DAC751 /* Assets.xcassets in Resources */,
 				B3DCE36122D03AC000DAC751 /* Main.storyboard in Resources */,
 			);
@@ -350,31 +354,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HealthApp/Pods-HealthApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
-				"${BUILT_PRODUCTS_DIR}/FloatingPanel/FloatingPanel.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HealthApp/Pods-HealthApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FloatingPanel.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HealthApp/Pods-HealthApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -603,14 +588,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HealthApp/HealthApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R27L3GB44P;
+				DEVELOPMENT_TEAM = 83T5257BF7;
 				INFOPLIST_FILE = HealthApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.moisesCordova.HealthApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Lemonhc.lyine.HealthApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -624,14 +609,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HealthApp/HealthApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R27L3GB44P;
+				DEVELOPMENT_TEAM = 83T5257BF7;
 				INFOPLIST_FILE = HealthApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.moisesCordova.HealthApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Lemonhc.lyine.HealthApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

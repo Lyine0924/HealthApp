@@ -75,7 +75,7 @@ class Doctor: Object {
             _lastName = newValue
         }
         get {
-            _lastName
+            return _lastName
         }
     }
     
