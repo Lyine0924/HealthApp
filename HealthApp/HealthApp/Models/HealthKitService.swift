@@ -89,6 +89,7 @@ class HealthKitService {
         return readeableBiologicalSex
     }
     
+    // HealthKit 과 관련된 권한을 설정하는 부분
     func authorizeHealthKit() {
         let healthKitTypesToRead: Set<HKObjectType> = [
             HKObjectType.characteristicType(forIdentifier: HKCharacteristicTypeIdentifier.dateOfBirth)!,
@@ -252,15 +253,29 @@ class HealthKitService {
         }
     }
     
+    // 심박수에 관한 정보 가져오는 부분
     func getHearthRate(from: Date, to: Date, patient: Patient) {
         let hearthRateSample = HKSampleType.quantityType(forIdentifier: HKQuantityTypeIdentifier.heartRate)
         let query = HKSampleQuery(sampleType: hearthRateSample!, predicate: .none, limit: 0, sortDescriptors: nil) { query, results, error in
             if results?.count ?? 0 > 0 {
                 for result in results as! [HKQuantitySample] {
+                    //print("result description : \(result.description) \n")
+                    /*
+                     result description : 75 count/min 40DEEDA4-3CAD-4F10-A937-C1D59BAFB4EF "HealthKit Sample Generator" (1), "iPhone7,2" (12.4) (2019-08-12 15:09:47 +0900 - 2019-08-12 15:09:47 +0900)
+                     */
+                    print("result quantity is : \(result.quantity)")
+                    // result quantity is : 74 count/min  ==> 내가 필요한 부분
+                    
                     if result.startDate >= from && result.endDate <= to {
                         DispatchQueue.main.async(execute: { () -> Void in
                             let formatedResult = self.getFormated(sample: result, forValue: HealthValue.hearth)
                             let hearthRecord = HearthRecord(bpm: formatedResult as! Int, startDate: result.startDate, endDate: result.endDate)
+                            /*
+                            print("hearthRecord bpm is : \(hearthRecord.bpm)")
+                            print("hearthRecord startDate is : \(hearthRecord.startDate)")
+                            print("hearthRecord endDate is : \(hearthRecord.endDate)")
+                            print("------------------------------------------------------")
+                            */
                             let primaryKey = "\(result.startDate)\(result.endDate)"
                             if self.realm?.object(ofType: HearthRecord.self, forPrimaryKey: primaryKey) == nil {
                                 do {
@@ -310,6 +325,7 @@ class HealthKitService {
         healthKitStore.execute(query)
     }
     
+    // 걸음수와 관련된 기능
     func getStepsCount(forSpecificDate: Date, completion: @escaping (Double) -> Void) {
         let stepsQuantityType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
         let (start, end) = getWholeDate(date: forSpecificDate)
@@ -360,12 +376,13 @@ class HealthKitService {
         return formatedMeasure
     }
     
-    
+    // MARK = data 파싱 관련 참고 함수
     func getFormated(sample: HKQuantitySample, forValue: HealthValue) -> AnyObject {
         var toFormat = "\(sample.quantity)"
         switch forValue {
         case .hearth:
             toFormat = toFormat.replacingOccurrences(of: " count/min", with: "")
+            //replacingOccurrences은 지정된 String의 범위 내의 모든 대상 문자열이 지정된 다른 문자열로 대체 한 새로운 문자열을 반환합니다.
             if let formated = Int(toFormat) {
                 return formated as AnyObject
             } else {

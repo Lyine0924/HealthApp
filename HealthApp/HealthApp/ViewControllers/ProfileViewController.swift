@@ -241,6 +241,7 @@ class ProfileViewController: UIViewController {
         reloadTables()
     }
     
+    // 이부분도 참고 필요
     func setAllDetails() {
         let initialDate = Date(timeIntervalSince1970: TimeInterval())
         let today = Date()
@@ -405,6 +406,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource, UIC
                         color = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
                         icon = UIImage(named: "weight-icon")!
                     case 5:
+                        // 컨트롤러에 데이터 넘겨주는 듯?
                         let records = Array(patient!.hearthRecords)
                         viewController.myRecords = records as [AnyObject]
                         title = "Hearth BPM"

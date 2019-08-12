@@ -9,6 +9,7 @@
 import Foundation
 import RealmSwift
 
+// MARK = 심박수 데이터 구조 참고해볼것
 class HearthRecord: Object {
     @objc private(set) dynamic var _bpm: Int = 0
     @objc private(set) dynamic var _startDate: Date = Date()
