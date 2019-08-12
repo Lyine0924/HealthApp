@@ -11,7 +11,7 @@ import Charts
 
 class RecordViewController: UIViewController {
     var records: [BasicRecord] = []
-    var myRecords: [AnyObject] = []
+    var myRecords: [AnyObject] = [] //참고 할 부분
     var mainColor: UIColor!
     var mainIcon: UIImage!
     var recordTitle: String!
@@ -45,6 +45,7 @@ class RecordViewController: UIViewController {
         barChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
     }
     
+    // MARK = 선택한 레코드 타입에 따른 데이터 파싱
     func createBasicRecords() {
         if let healthRecords = myRecords as? [HearthRecord] {
             let sortedRecords = healthRecords.sorted(by: {$0.endDate > $1.endDate})

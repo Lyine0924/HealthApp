@@ -269,6 +269,7 @@ class HealthKitService {
                     if result.startDate >= from && result.endDate <= to {
                         DispatchQueue.main.async(execute: { () -> Void in
                             let formatedResult = self.getFormated(sample: result, forValue: HealthValue.hearth)
+                            // MARK = 심박수 기록 데이터 형변환
                             let hearthRecord = HearthRecord(bpm: formatedResult as! Int, startDate: result.startDate, endDate: result.endDate)
                             /*
                             print("hearthRecord bpm is : \(hearthRecord.bpm)")
@@ -280,6 +281,7 @@ class HealthKitService {
                             if self.realm?.object(ofType: HearthRecord.self, forPrimaryKey: primaryKey) == nil {
                                 do {
                                     try? self.realm?.write {
+                                        // 리스트에 데이터 추가함
                                         patient.hearthRecords.append(hearthRecord)
                                     }
                                 }
